@@ -1,0 +1,201 @@
+body {
+  font-family: 'poppins';
+  text-align: center;
+  padding: 6px;
+  background-color: #cad2c5;
+  background-size:cover;
+  
+}
+
+.enter-name {
+  font-size: 1.4rem;
+}
+
+.borderimg {
+  border: black solid 0.5rem;
+}
+
+.section {
+  display: flex;
+}
+
+.left, .right {
+  margin: 0px 30px;
+}
+
+.right {
+  border: black solid 0.5rem;
+  height: 320px;
+  width : 300px;
+  padding: 1.2rem;
+
+}
+
+.topic {
+  font-size: 2.0rem;
+}
+
+.score {
+  font-size: 2.5rem;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.yourscore {
+  font-size: 1.5rem;
+}
+
+.click {
+  font-size: 1.4rem;
+}
+
+.myinput {
+  padding: 12px 1px;
+  min-width: 60px;
+  font-size: large;
+  text-align: center;
+  font-weight: 500;
+}
+
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.label-input-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formbox {
+  background-color: #219ebc;
+}
+
+input {
+  padding: 5px;
+  width: 50px;
+  margin: 0 10px;
+}
+
+button {
+  padding: 16px 36px;
+  background-color: white;
+  color: black;
+  font-family: 'poppins';
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: black;
+  color: white;
+  transition-duration: .6s;
+}
+
+.card {
+  background-color: transparent;
+  padding: 12px 50px;
+  border-style: none;
+}
+
+.btn-home {
+  padding: 12px 20px;
+  width: 100px;
+  border-radius: 0;
+  background-color: black;
+}
+.btn-home:hover {
+  background-color: white;
+  color: black;
+  transition-duration: .5s;
+}
+
+.btn-homelogin{
+  padding: 12px 20px;
+  width: 100px;
+  border-radius: 0;
+  background-color: black;
+}
+.btn-homelogin:hover {
+  background-color: white;
+  color: black;
+  transition-duration: .5s;
+}
+
+/* -------------------------------------------------------------------------------- */
+.btn-create{
+  padding: 12px 20px;
+  width: 100px;
+  border-radius: 0;
+  background-color: black;
+}
+.btn-homelogin:hover {
+  background-color: white;
+  color: black;
+  transition-duration: .5s;
+}
+/* -------------------------------------------------------------------------------- */
+.scores {
+  box-sizing: border-box;
+  background-color: #db4d34;
+  padding-top: 2rem;
+}
+
+.accordion {
+  padding: 0 400px;
+  text-align: center;
+}
+
+.homebox {
+  text-align: center;
+}
+
+.playbtn {
+  padding: 20px 30px;
+  width: 100px;
+  border-radius: 0;
+  background-color: black;
+  text-decoration: none;
+  font-family: 'poppins';
+  color: white;
+  font-weight: 500;
+}
+.playbtn:hover {
+  color: black;
+  background-color: #db4d34;
+  transition-duration: .6s;
+}
+
+.hello {
+  font-size: 1.4rem;
+  padding: 12px 0px;
+}
+
+.huntertopic {
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+.flex-container {
+  background-color: #db4d34;
+}
