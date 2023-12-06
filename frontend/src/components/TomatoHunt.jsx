@@ -95,7 +95,7 @@ const TomatoHunt = ({ }) => {
                                 <input type="text" className='myinput' value={value} onChange={(e) => setValue(e.target.value)} />
                                 {!isCorrect && <button onClick={handleSubmit}>Check</button>}
                             </div>
-                            {isCorrect && <button className='mt-4' onClick={handleNextLevel}>Next Level</button>}
+                            {isCorrect && <button className='mt-4' onClick={handleNextLevel}>Next Level.</button>}
                             
                         </div>
                     </div>
