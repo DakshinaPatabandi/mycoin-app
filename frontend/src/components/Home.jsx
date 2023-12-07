@@ -7,8 +7,8 @@ const Home = () => {
     <div className="flex-container  vh-100">
       <div className='container pt-5'>
         <div className="homebox">
-          <h1 className='pt-5 huntertopic' >Tomato Hunter</h1>
-          <p className='hello' >Hello gamers. Welcome to the tomato hunter math game.</p>
+          <h1 className='pt-5 huntertopic' >Tomato Hunt</h1>
+          <p className='hello' >Hello gamers. Welcome to the tomato hunt math game.</p>
 
           <div className="accordion pt-5 pb-5  paccordion-flush" id="accordionFlushExample">
             <div class="accordion-item">

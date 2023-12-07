@@ -1,5 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom"
 import { useState } from "react"
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
 
 function Login() {
@@ -20,12 +22,19 @@ function Login() {
                 if (res.data.status === "Success") {
                     navigate(`/TomatoHunt?username=${res.data.username}`)
                 } else {
-                    alert('No record found')
+                    toast.error('Invalid Username or password!', {
+                        position: toast.POSITION.TOP_CENTER,
+                        autoClose: 3000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                    });
                 }
             })
             .catch(err => console.log(err))
 
     }
+
+
 
 
 
@@ -72,6 +81,8 @@ function Login() {
                 </div>
 
             </div>
+
+            <ToastContainer />
         </>
 
     )

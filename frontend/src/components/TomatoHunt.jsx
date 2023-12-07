@@ -45,7 +45,7 @@ const TomatoHunt = () => {
             toast.success('You are correct!', {
                 position: toast.POSITION.TOP_CENTER,
                 autoClose: 3000,
-                hideProgressBar: false,
+                hideProgressBar: true,
                 closeOnClick: true,
             });
             setIsCorrect(true);
