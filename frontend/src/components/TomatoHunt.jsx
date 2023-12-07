@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "../App.css";
 import { NavLink, useLocation } from "react-router-dom"
 
-const TomatoHunt = ({ }) => {
+const TomatoHunt = () => {
 
     const location = useLocation();
 
@@ -40,12 +40,12 @@ const TomatoHunt = ({ }) => {
     // Handles the user's guess
     const handleSubmit = () => {
         setClicktime(clicktime + 1)
-        const parsedGuess = parseInt(value, 10);
-        if (parsedGuess === solution) {
+        const checker = parseInt(value, 10);
+        if (checker === solution) {
             toast.success('You are correct!', {
                 position: toast.POSITION.TOP_CENTER,
                 autoClose: 3000,
-                hideProgressBar: true,
+                hideProgressBar: false,
                 closeOnClick: true,
             });
             setIsCorrect(true);
@@ -75,7 +75,7 @@ const TomatoHunt = ({ }) => {
                 <div class="col-8">
                     <div class="card ">
                         <img src={imageUrl} className='borderimg' alt="Tomato Game" />
-                    <NavLink to='/' className='mt-3 btn-home btn btn-primary border'><strong>Home</strong></NavLink>
+                        <NavLink to='/' className='mt-3 btn-home btn btn-primary border'><strong>Home</strong></NavLink>
                     </div>
                 </div>
                 <div className="col scores">
@@ -96,7 +96,7 @@ const TomatoHunt = ({ }) => {
                                 {!isCorrect && <button onClick={handleSubmit}>Check</button>}
                             </div>
                             {isCorrect && <button className='mt-4' onClick={handleNextLevel}>Next Level.</button>}
-                            
+
                         </div>
                     </div>
                 </div>
