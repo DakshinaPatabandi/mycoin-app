@@ -20,13 +20,13 @@ function Login() {
         axios.post('http://localhost:8801/login', values)
             .then(res => {
                 if (res.data.status === "Success") {
-                    navigate(`/TomatoHunt?username=${res.data.username}`)
+                    navigate(`/AccountHome?username=${res.data.username}`)
                 } else {
                     toast.error('Invalid Username or password!', {
                         position: toast.POSITION.TOP_CENTER,
                         autoClose: 3000,
                         hideProgressBar: true,
-                        closeOnClick: true,
+                        closeOnClick: true,                                     
                     });
                 }
             })
@@ -40,9 +40,9 @@ function Login() {
 
     return (
         <>
-            <h1 className="topic mt-5">Welcome to Tomato Hunt</h1>
+            <h1 className="topic mt-5">Already have a account?</h1>
             <div className="container pt-5 justify-content-center align-items-center d-flex  ">
-                <div className="mt-1 justify-content-center align-items-center rounded-2 p-5 formbox">
+                <div className="mt-1 justify-content-center align-items-center rounded-2 p-5 formbox2">
                     <h2>Log In</h2>
                     <form action="" onSubmit={handleSubmit}>
                         <div class="mb-3">
@@ -74,8 +74,7 @@ function Login() {
 
                         <p><strong>Don't have a account? Create new account</strong></p>
                         <NavLink to='/Signup' className='btn btn-primary d-block'><strong>Create Account</strong></NavLink><br></br>
-
-                        <NavLink to='/' className='mt-3 btn-homelogin btn btn-primary border'><strong>Home</strong></NavLink>
+                        <NavLink to='/SignNavBox' className='mt-3 btn-backlogin btn btn-primary border'><strong>Back</strong></NavLink>
 
                     </form>
                 </div>

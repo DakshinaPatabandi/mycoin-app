@@ -1,10 +1,19 @@
-body {
+/* body {
   font-family: 'poppins';
   text-align: center;
   padding: 6px;
   background-color: #cad2c5;
-  background-size:cover;
-  
+  background-size: cover;
+
+} */
+
+body {
+  font-family: 'poppins';
+  text-align: center;
+  padding: 6px;
+  background-color: #ffffff;
+  background-size: cover;
+
 }
 
 .enter-name {
@@ -19,14 +28,15 @@ body {
   display: flex;
 }
 
-.left, .right {
+.left,
+.right {
   margin: 0px 30px;
 }
 
 .right {
   border: black solid 0.5rem;
   height: 320px;
-  width : 300px;
+  width: 300px;
   padding: 1.2rem;
 
 }
@@ -87,10 +97,6 @@ label {
   margin-bottom: 5px;
 }
 
-.formbox {
-  background-color: #219ebc;
-}
-
 input {
   padding: 5px;
   width: 50px;
@@ -106,6 +112,7 @@ button {
   border: none;
   cursor: pointer;
 }
+
 button:hover {
   background-color: black;
   color: white;
@@ -124,31 +131,34 @@ button:hover {
   border-radius: 0;
   background-color: black;
 }
+
 .btn-home:hover {
   background-color: white;
   color: black;
   transition-duration: .5s;
 }
 
-.btn-homelogin{
+.btn-backlogin {
   padding: 12px 20px;
   width: 100px;
   border-radius: 0;
   background-color: black;
 }
-.btn-homelogin:hover {
+
+.btn-backlogin:hover {
   background-color: white;
   color: black;
   transition-duration: .5s;
 }
 
 /* -------------------------------------------------------------------------------- */
-.btn-create{
+.btn-create {
   padding: 12px 20px;
   width: 100px;
   border-radius: 0;
   background-color: black;
 }
+
 .btn-homelogin:hover {
   background-color: white;
   color: black;
@@ -161,7 +171,23 @@ button:hover {
   padding-top: 2rem;
 }
 
-.accordion {
+/* -----------------------------accordions-----------------------*/
+
+.accordionhome {
+  padding: 0 400px;
+  text-align: center;
+  color: #000000;  /*text color */
+  /* lighting-color: #028ec5; */
+  
+}
+
+
+.accordionleft {
+  padding: 0 400px;
+  text-align: center;
+}
+
+.accordionright {
   padding: 0 400px;
   text-align: center;
 }
@@ -169,6 +195,14 @@ button:hover {
 .homebox {
   text-align: center;
 }
+
+/* .leftbox {
+  text-align: left;
+}
+
+.rightbox {
+  text-align: right;
+} */
 
 .playbtn {
   padding: 20px 30px;
@@ -180,22 +214,327 @@ button:hover {
   color: white;
   font-weight: 500;
 }
+
 .playbtn:hover {
   color: black;
   background-color: #db4d34;
   transition-duration: .6s;
 }
 
-.hello {
+
+
+
+
+/* -----------------------------home page-----------------------*/
+
+/* .flex-container-home {
+  background-color: #a3b4be;
+} */
+
+.flex-container-home {
+  background-color: #ffffff;
+}
+
+
+.hometopic {
+  font-size: 3.6rem;
+  font-weight: 600;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.homesubtopic {
+  font-size: 1.4rem;
+  padding: 12px 0px;
+
+}
+
+.UpNavtitle1 {
+  font-size: 2.4rem;
+  padding: 0px 0px;
+  text-align: start;
+  margin-left: 7%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.UpNavtitle2 {
+  font-size: 1rem;
+  padding: 0px 0px;
+  text-align: left;
+  margin-left: 7%;
+  margin-top: 0%;
+  margin-bottom: 1%;
+}
+
+.homebtn {
+  padding: 20px 30px;
+  width: 100px;
+  border-radius: 0;
+  background-color: rgb(2, 122, 48);
+  text-decoration: none;
+  font-family: 'poppins';
+  color: white;
+  font-weight: 500;
+}
+
+.homebtn:hover {
+  color: rgb(254, 254, 254);
+  background-color: #000000;
+  transition-duration: .6s;
+}
+
+
+/* -----------------------------about page-----------------------*/
+
+/* .flex-container-about {
+  background-color: #dce0e2;
+  text-align: left;
+} */
+
+.flex-container-about {
+  background-color: #ffffff;
+  text-align: left;
+}
+
+
+.aboutsubtopics1 {
   font-size: 1.4rem;
   padding: 12px 0px;
 }
 
-.huntertopic {
-  font-size: 3.6rem;
-  font-weight: 600;
+/* .aboutsubtopics2 {
+  font-size: 0.8rem;
+  padding: 8px 0px;
+} */
+
+/* -----------------------------------Signhomepage------------------------------------- */
+
+.flex-container-SignNavBox {
+  background-color: #ffffff;
+  text-align: left;
 }
 
-.flex-container {
-  background-color: #db4d34;
+.leftbox,
+.rightbox {
+  width: 100%;
+  box-sizing: border-box;
 }
+
+
+.leftbox {
+  float: left;
+}
+
+.rightbox {
+  float: right;
+}
+
+/* -----------------------------Signin page-----------------------*/
+
+.formbox1 {
+  background-color: #aaa3ae;
+}
+
+/* -----------------------------Login page-----------------------*/
+
+.formbox2 {
+  background-color: #b0babd;
+}
+
+/* -------------------------AccountHome page-----------------------*/
+
+.flex-container-accountHome {
+  background-color: #ffffff;
+  text-align: left;
+}
+
+/* .flex-container-accountHome {
+  background-color: #dce0e2;
+  text-align: left;
+} */
+
+.accountHomesubtopics1 {
+  font-size: 1.2rem;
+  padding: 0px 0px;
+  margin-top: 35px;
+}
+
+
+.formbox-creditcard {
+  background-color: #bebfbf;
+  
+}
+
+/* -------------------------Income page-----------------------*/
+
+.flex-container-accountHome {
+  background-color: #dce0e2;
+  text-align: left;
+}
+
+.Incometopic {
+  font-size: 2.5rem;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+.formbox-Income {
+  background-color: #8caeae;
+  border: #000000;
+  
+}
+
+/* -------------------------Expences page-----------------------*/
+
+.flex-container-accountHome {
+  background-color: #dce0e2;
+  text-align: left;
+}
+
+.Expencestopic {
+  font-size: 2.5rem;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+.formbox-Expences {
+  background-color: #ceb7d6;
+  border: #000000;
+  
+}
+
+/* -----------------------------------AI Page------------------------------------ */
+
+.btn-AI-worth {
+  /* padding: 10px 30px;
+  width: 100px;
+  height: 45px; */
+  border-radius: 0;
+  background-color: rgb(2, 122, 48);
+  text-decoration: none;
+  font-family: 'poppins';
+  color: white;
+  /* font-weight: 500;
+  margin-left: 0%;
+  margin-top: 0%;
+  text-align: center; */
+}
+
+.btn-AI-worth:hover {
+  color: rgb(254, 254, 254);
+  background-color: #028ec5;
+  transition-duration: .6s;
+}
+
+.btn-AI-Notworth {
+  /* padding: 10px 30px;
+  width: 145px;
+  border-radius: 0; */
+  background-color: rgb(254, 127, 0);
+  text-decoration: none;
+  font-family: 'poppins';
+  color: white;
+  /* font-weight: 500;
+  margin-left: 45%;
+  margin-top: 0%;
+  text-align: center; */
+}
+
+.btn-AI-Notworth:hover {
+  color: rgb(254, 254, 254);
+  background-color: #028ec5;
+  transition-duration: .6s;
+}
+
+
+/* -----------------------------------About page photos------------------------------------- */
+
+.facebook-logo {
+  width: 30px;
+  height: auto;
+  margin-right: 50px;
+}
+
+.instagram-logo {
+  width: 30px;
+  height: auto;
+  margin-right: 50px;
+}
+
+.whatsapp-logo {
+  width: 30px;
+  height: auto;
+  margin-right: 50px;
+}
+
+.linkedin-logo {
+  width: 30px;
+  height: auto;
+  margin-right: 50px;
+}
+
+.youtube-logo {
+  width: 30px;
+  height: auto;
+  margin-right: 50px;
+}
+
+/* -----------------------------------Home page photos------------------------------------- */
+
+.GoldCup {
+  width: 500px;
+  height: auto;
+  margin-right: 50px;
+}
+
+
+
+
+/* -----------------------------------NavBar------------------------------------- */
+
+/* .navbar-frame {
+  border: 0px solid #3d3d3dcb;
+  padding: 0px;
+  margin: 0px;
+  background-color: #bebaba72;
+  color: #000000;
+  -webkit-text-fill-color: #ffffff;
+} */
+
+.navbar {
+  display: flex;
+  border: 2px solid;
+  border-color: #028ec5;
+  padding: 0px;
+  margin: 0px;
+  background-color: #b8b8b872;
+  color: #000000;
+  justify-content: center;
+  text-decoration: none;
+}
+
+
+.container-boxx{
+  display: flex;
+  height: calc(100vh - 70px);
+} 
+
+/* .chat-list{
+  width: 40%;
+  margin: 16px;
+  background-color: rgb(215, 216, 216);
+  border-radius: 36px;
+} */
+
+.messages{
+  width: 100%;
+  margin: 16px;
+  background-color:#fcf6bd;
+  border-radius: 16px;
+  padding-left: 200px;
+  padding-right:200px;
+}
+
+
+
+

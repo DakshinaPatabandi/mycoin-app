@@ -10,7 +10,7 @@ const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password:"",
-    database: "signup"
+    database: "mycoin"
 })
 
 app.post('/signup', (req, res) => {
@@ -44,19 +44,36 @@ app.post('/login', (req, res) => {
     })
 })
 
-app.get('/TomatoHunt', (req, res) => {
-    const username = req.query.username;
-    const sql = "SELECT * FROM login WHERE `username` = ?";
-    db.query(sql, [username], (err, data) => {
+app.get('/Income', (req, res) => {
+    const sql = "SELECT * FROM Income";
+    db.query(sql, (err, data) => {
         if(err) {
             return res.json('Error')
         } else {
-            res.send(data)
-        }
-        
+            return res.json(data)
+        }  
         
     })
 })
+
+
+
+
+
+
+// app.get('/Income', (req, res) => {
+//     const username = req.query.username;
+//     const sql = "SELECT * FROM login WHERE `username` = ?";
+//     db.query(sql, [username], (err, data) => {
+//         if(err) {
+//             return res.json('Error')
+//         } else {
+//             res.send(data)
+//         }
+        
+        
+//     })
+// })
 
 app.listen(8801, () => {
     console.log('listening');
