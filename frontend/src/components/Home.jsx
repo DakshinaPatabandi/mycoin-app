@@ -11,12 +11,44 @@ const Home = () => {
 
       <div className="UpNavtitle">
         <p className='pt-5 UpNavtitle1'>MyCoin</p>
-        <p className='UpNavtitle2' >Expences Tracker Web Application</p>
+        <p className='UpNavtitle2' >Expenses Tracker Web Application</p>
       </div>
 
       <div className='container pt-2'>
 
-        <Navbar />
+        {/* <Navbar /> */}
+        <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-with-frame">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="/">
+          MyCoin
+        </a>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+            <NavLink to='/' className="nav-link active" aria-current="page">
+              Home
+            </NavLink>
+            <NavLink className="nav-link" to="/About">
+              About
+            </NavLink>
+            <NavLink className="nav-link" to="/SignNavbox">
+              Signup
+            </NavLink>
+            <NavLink className="nav-link" to="/SignNavbox">
+              My Account
+            </NavLink>
+            <NavLink className="nav-link" to="/SignNavbox">
+              Income
+            </NavLink>
+            <NavLink className="nav-link" to="/SignNavbox">
+              Expenses
+            </NavLink>
+            <NavLink className="nav-link" to="/SignNavbox">
+              MyCoinAI
+            </NavLink>
+          </div>
+        </div>
+      </div>
+    </nav>
 
         <div className="homebox">
           <h1 className='pt-5 hometopic'>My Coin</h1>

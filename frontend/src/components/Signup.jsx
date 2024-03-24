@@ -13,7 +13,7 @@ function Signup() {
   const handleInput = (event) => {
     setValues((prev) => ({
       ...prev,
-      [event.target.name]: [event.target.value],
+      [event.target.name]: event.target.value,
     }));
   };
 
@@ -33,8 +33,8 @@ function Signup() {
       <div className="container mt-2 justify-content-center align-items-center d-flex  ">
         <div className="mt-5  justify-content-center align-items-center rounded-2 p-5 formbox1">
           <h2>Create your account</h2>
-          <form action="POST" onSubmit={handleSubmit}>
-            <div class="mb-3">
+          <form action="" onSubmit={handleSubmit}>
+            <div className="mb-3">
               <label className="form-label">
                 <strong>Name</strong>
               </label>
@@ -42,7 +42,7 @@ function Signup() {
                 type="text"
                 required
                 name="username"
-                class="form-control rounded-0"
+                className="form-control rounded-0"
                 onChange={handleInput}
                 placeholder="Enter Username"
               />
@@ -55,7 +55,7 @@ function Signup() {
                 type="text"
                 required
                 name="email"
-                class="form-control rounded-0"
+                className="form-control rounded-0"
                 onChange={handleInput}
                 placeholder="Enter Your Email"
               />
@@ -68,7 +68,7 @@ function Signup() {
                 type="password"
                 required
                 name="password"
-                class="form-control rounded-0"
+                className="form-control rounded-0"
                 onChange={handleInput}
                 placeholder="Enter Password"
               />

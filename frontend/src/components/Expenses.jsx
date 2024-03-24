@@ -4,19 +4,19 @@ import "../App.css";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
-const Income = () => {
-  const [income, setIncome] = useState([]);
+const Expenses = () => {
+  const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:8801/Income")
-      .then((res) => setIncome(res.data))
+      .get("http://localhost:8801/Expenses")
+      .then((res) => setExpenses(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete("http://localhost:8801/Income/" + id);
+      await axios.delete("http://localhost:8801/Expenses/" + id);
       window.location.reload();
     } catch (err) {}
   };
@@ -32,38 +32,38 @@ const Income = () => {
         <Navbar />
 
         <div className="aboutbox">
-          <h1 className="pt-5 Incometopic">Add your income sources</h1>
+          <h1 className="pt-5 Expensestopic">Add your expenses Methods</h1>
         </div>
 
         <div className="flex-container-accountHome vh-50">
           <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
             <div className="w-75 bg-white rounded p-3">
-              <Link to="/CreateIncome" className="btn btn-success">
+              <Link to="/CreateExpenses" className="btn btn-success">
                 Add +
               </Link>
               <table className="table">
                 <thead>
                   <tr>
-                    <th>Source</th>
-                    <th>Income</th>
+                    <th>Method</th>
+                    <th>Cost</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {income.map((data, i) => (
+                  {expenses.map((data, i) => (
                     <tr key={i}>
-                      <td>{data.Source}</td>
-                      <td>{data.Income}</td>
+                      <td>{data.Method}</td>
+                      <td>{data.Cost}</td>
                       <td>
                         <Link
-                          to={`/UpdateIncome/${data.In_ID}`}
+                          to={`/UpdateExpenses/${data.Ex_ID}`}
                           className="btn btn-primary"
                         >
                           Update
                         </Link>
                         <button
                           className="btn btn-danger ms-2"
-                          onClick={(e) => handleDelete(data.In_ID)}
+                          onClick={(e) => handleDelete(data.Ex_ID)}
                         >
                           Delete
                         </button>
@@ -77,7 +77,7 @@ const Income = () => {
         </div>
 
         {/* <div className="container mt-2 justify-content-center align-items-center d-flex  ">
-                    <div className="mt-5  justify-content-center align-items-center rounded-2 p-5 formbox-Income">
+                    <div className="mt-5  justify-content-center align-items-center rounded-2 p-5 formbox-Expences">
                         <form action="" >
                             <div class="mb-3">
                                 <label className="form-label"><strong>Section 01:</strong></label>
@@ -94,7 +94,7 @@ const Income = () => {
                 </div>
 
                 <div className="container mt-2 justify-content-center align-items-center d-flex  ">
-                    <div className="mt-5  justify-content-center align-items-center rounded-2 p-5 formbox-Income">
+                    <div className="mt-5  justify-content-center align-items-center rounded-2 p-5 formbox-Expences">
                         <form action="" >
                             <div class="mb-3">
                                 <label className="form-label"><strong>Section 02:</strong></label>
@@ -114,4 +114,4 @@ const Income = () => {
   );
 };
 
-export default Income;
+export default Expenses;

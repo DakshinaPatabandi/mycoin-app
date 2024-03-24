@@ -18,7 +18,7 @@ const About = () => {
 
             <div className="UpNavtitle">
                 <p className='pt-5 UpNavtitle1'>MyCoin</p>
-                <p className='UpNavtitle2' >Expences Tracker Web Application</p>
+                <p className='UpNavtitle2' >Expenses Tracker Web Application</p>
             </div>
 
             <div className='container pt-2'>

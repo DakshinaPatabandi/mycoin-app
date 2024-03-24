@@ -384,20 +384,21 @@ button:hover {
   
 }
 
-/* -------------------------Expences page-----------------------*/
+
+/* -------------------------Expenses page-----------------------*/
 
 .flex-container-accountHome {
   background-color: #dce0e2;
   text-align: left;
 }
 
-.Expencestopic {
+.Expensestopic {
   font-size: 2.5rem;
   padding: 0px;
   margin-top: 0px;
 }
 
-.formbox-Expences {
+.formbox-Expenses {
   background-color: #ceb7d6;
   border: #000000;
   

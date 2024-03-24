@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
 import "../App.css";
+import Navbar from './Navbar';
 
 
 
@@ -12,28 +13,12 @@ const MyCoinAI = () => {
 
             <div className="UpNavtitle">
                 <p className='pt-5 UpNavtitle1'>MyCoin</p>
-                <p className='UpNavtitle2' >Expences Tracker Web Application</p>
+                <p className='UpNavtitle2' >Expenses Tracker Web Application</p>
             </div>
 
             <div className='container pt-2'>
 
-                <div class="navbar-frame">
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-with-frame">
-
-                        <div class="container-fluid">
-                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                <div class="navbar-nav">
-                                    <a class="nav-link active" aria-current="page" href="/">Home</a>
-                                    <a class="nav-link" href="/AccountHome">Account Settings</a>
-                                    <a class="nav-link" href="/Income">Income</a>
-                                    <a class="nav-link" href="/Expences">Expences</a>
-                                    <a class="nav-link" href="/MyCoinAI">MyCoinAI</a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
+                <Navbar />
 
 
                 <div className="aboutbox">
