@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
 import "../App.css";
-import Navbar from './Navbar';
+import NavbarNew from "./NavbarNew";
 
 
 
@@ -9,16 +9,10 @@ import Navbar from './Navbar';
 const MyCoinAI = () => {
     return (
 
-        <div className="flex-container-accountHome  vh-50">
+        <div>
+            <div>
 
-            <div className="UpNavtitle">
-                <p className='pt-5 UpNavtitle1'>MyCoin</p>
-                <p className='UpNavtitle2' >Expenses Tracker Web Application</p>
-            </div>
-
-            <div className='container pt-2'>
-
-                <Navbar />
+                <NavbarNew />
 
 
                 <div className="aboutbox">

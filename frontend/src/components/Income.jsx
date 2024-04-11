@@ -3,6 +3,7 @@ import axios from "axios";
 import "../App.css";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import NavbarNew from "./NavbarNew";
 
 const Income = () => {
   const [income, setIncome] = useState([]);
@@ -22,21 +23,25 @@ const Income = () => {
   };
 
   return (
-    <div className="flex-container-accountHome  vh-50">
-      <div className="UpNavtitle">
-        <p className="pt-5 UpNavtitle1">MyCoin</p>
-        <p className="UpNavtitle2">Expenses Tracker Web Application</p>
-      </div>
-
-      <div className="container pt-2">
-        <Navbar />
-
-        <div className="aboutbox">
-          <h1 className="pt-5 Incometopic">Add your income sources</h1>
+    <div>
+      <div>
+        <NavbarNew />
+        {/* Header Section */}
+        <div className="text-center my-10 ">
+          <p data-aos="" className="text-sm text-yellow-600">
+            Hello!!!
+          </p>
+          <h1 data-aos="" className="text-3xl font-bold">
+            Track your income here
+          </h1>
+          <p data-aos="" className="text-xs text-gray-400">
+            We are always with you!
+          </p>
         </div>
 
+
         <div className="flex-container-accountHome vh-50">
-          <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
+          <div className="d-flex vh-100 bg-yellow-200 justify-content-center align-items-center">
             <div className="w-75 bg-white rounded p-3">
               <Link to="/CreateIncome" className="btn btn-success">
                 Add +

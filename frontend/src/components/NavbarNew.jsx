@@ -3,6 +3,7 @@ import Logo from "../assets/Logo.png";
 import { IoMdSearch } from "react-icons/io";
 import { RiAccountCircleFill } from "react-icons/ri";
 import { FaCaretDown } from "react-icons/fa";
+// import { Link } from "react-router-dom";
 
 const Menu = [
   {
@@ -81,6 +82,7 @@ const NavbarNew = () => {
           py-1 px-4 rounded-full flex items-center gap-3 group ">
             <span className="group-hover:block hidden transition-all duration-200">SignUp</span>
             <RiAccountCircleFill className="text-xl text-white drop-shadow-sm cursor-pointer"/>
+            {/* <Link to="/Register"></Link> */}
           </button>
           </div>
         </div>

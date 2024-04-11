@@ -1,7 +1,7 @@
 import React from 'react'
 // import { NavLink } from "react-router-dom"
 import "../App.css";
-import Navbar from './Navbar';
+import NavbarNew from "./NavbarNew";
 
 
 
@@ -9,16 +9,10 @@ import Navbar from './Navbar';
 const About = () => {
     return (
 
-        <div className="flex-container-accountHome  vh-50">
+        <div>
+            <div>
 
-            <div className="UpNavtitle">
-                <p className='pt-5 UpNavtitle1'>MyCoin</p>
-                <p className='UpNavtitle2' >Expenses Tracker Web Application</p>
-            </div>
-
-            <div className='container pt-2'>
-
-                <Navbar />
+            <NavbarNew />
 
                 <div className="aboutbox">
                     <h1 className='pt-5 accountHometopic'>Account Balance:</h1>
@@ -29,9 +23,6 @@ const About = () => {
 
                     <h1 className='pt-5 abouttopic' >Add your Credit card details</h1><br></br>
 
-                    {/* <p className='accountHomesubtopics1' >Account number:</p>
-                    <p className='accountHomesubtopics1' >Expire Date:</p>
-                    <p className='accountHomesubtopics1' >Security Code:</p> */}
                 </div>
 
 

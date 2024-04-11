@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // import Home from './components/Home'
 import Login from './components/Login'
 import Signup from './components/Signup'
-import SignNavbox from './components/SignNavbox'
+// import SignNavbox from './components/SignNavbox'
 import About from './components/About'
 import AccountHome from './components/AccountHome'
 import Income from './components/Income'
@@ -37,7 +37,7 @@ const App = () => {
             {/* <Route path='/' element={<Home />}> </Route>            */}
             <Route path='/login' element={<Login />}> </Route>
             <Route path='/signup' element={<Signup />}> </Route>
-            <Route path='/SignNavbox' element={<SignNavbox />}> </Route>
+            {/* <Route path='/SignNavbox' element={<SignNavbox />}> </Route> */}
             <Route path='/About' element={<About />}> </Route>
             <Route path='/AccountHome' element={<AccountHome />}> </Route>
             <Route path='/Income' element={<Income />}> </Route>

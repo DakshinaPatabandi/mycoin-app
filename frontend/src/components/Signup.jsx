@@ -1,6 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import NavbarNew from "./NavbarNew";
 
 function Signup() {
   const navigate = useNavigate();
@@ -29,7 +30,8 @@ function Signup() {
 
   return (
     <>
-      <h1 className="topic mt-5">Are you new to here?</h1>
+      <NavbarNew />
+
       <div className="container mt-2 justify-content-center align-items-center d-flex  ">
         <div className="mt-5  justify-content-center align-items-center rounded-2 p-5 formbox1">
           <h2>Create your account</h2>
@@ -83,7 +85,7 @@ function Signup() {
               <strong>Your are agreed to our teams and policies</strong>
             </p>
             <NavLink
-              to="/SignNavBox"
+              to="/Register"
               className="mt-3 btn-backlogin btn btn-primary border"
             >
               <strong>Back</strong>

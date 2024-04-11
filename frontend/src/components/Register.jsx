@@ -44,7 +44,7 @@ const Register = () => {
       <NavbarNew />
       <div className="container">
         {/* Header Section */}
-        <div className="text-center mb-20 ">
+        <div className="text-center my-10 ">
           <p data-aos="fade-up" className="text-sm text-yellow-600">
             Signup or Login
           </p>
@@ -61,7 +61,7 @@ const Register = () => {
             <div
               data-aos="zoom-in"
               className="rounded-2xl p-12 bg-gray-1 hover:bg-gray-700 hover:text-white relative shadow-xl
-            duration-300 group max-w-[300px"
+            duration-300 group"
             >
               {/* Image Section */}
               <div className="h-[100px]">
@@ -74,13 +74,12 @@ const Register = () => {
               {/* details Section */}
               <div className="p-4 text-center">
                 <h1 className="text-xl font-bold">{data.title}</h1>
-                <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">
+                <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2 mb-4">
                   {data.description}
                 </p>
                 <NavLink
-                  className="bg-primary/100 hover:scale-105 duration-300 text-white py-1 px-4 rounded-full hover:bg-black
+                  className="bg-primary/100 hover:scale-105 duration-300 text-white py-1 mt-5 px-4 rounded-full hover:bg-black
                    hover:text-white" 
-                    // onClick={handleOrderPopup(data.id)}
                     to={data.id == 1 ? `/signup` : `/login`}
                   >
                     GO

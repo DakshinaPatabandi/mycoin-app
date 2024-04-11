@@ -8,6 +8,8 @@ import Slider from "react-slick";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { Link } from "react-router-dom";
+
 const ImageList = [
   {
     id: 1,
@@ -88,16 +90,20 @@ const HomeNew = () => {
                       {data.description}
                     </p>
                     <div
-                    data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay="300"
+                      data-aos="fade-up"
+                      data-aos-duration="500"
+                      data-aos-delay="300"
                     >
-                      <button
-                        className="bg-gradient-to-r from-primary to-secondary hover:scale-105
-                  duration-200 text-white py-2 px-4 rounded-full "
-                      >
+                      {/* <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105
+                       duration-200 text-white py-2 px-4 rounded-full ">
                         Get Started
+                      </button> */}
+
+                      <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105
+                      duration-200 text-white py-2 px-4 rounded-full">
+                        <Link to="/Register">Get Started</Link>
                       </button>
+
                     </div>
                   </div>
                   {/* Image section */}
