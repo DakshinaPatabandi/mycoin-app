@@ -19,15 +19,13 @@ const Home = () => {
         {/* <Navbar /> */}
         <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-with-frame">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand text-black" href="/">
           MyCoin
         </a>
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <NavLink to='/' className="nav-link active" aria-current="page">
+            <NavLink to='/' className="nav-link active " aria-current="page">
               Home
             </NavLink>
-            <NavLink className="nav-link" to="/About">
+            <NavLink className="nav-link  text-black" to="/About">
               About
             </NavLink>
             <NavLink className="nav-link" to="/SignNavbox">
@@ -36,17 +34,18 @@ const Home = () => {
             <NavLink className="nav-link" to="/SignNavbox">
               My Account
             </NavLink>
-            <NavLink className="nav-link" to="/SignNavbox">
+            <NavLink className="nav-link" to="/Income">
               Income
             </NavLink>
-            <NavLink className="nav-link" to="/SignNavbox">
+            <NavLink className="nav-link" to="/Expenses">
               Expenses
             </NavLink>
             <NavLink className="nav-link" to="/SignNavbox">
               MyCoinAI
             </NavLink>
-          </div>
-        </div>
+            <NavLink className="nav-link" to="/HomeNew">
+            HomeNew
+            </NavLink>
       </div>
     </nav>
 

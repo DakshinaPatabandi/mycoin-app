@@ -9,8 +9,8 @@
 
 body {
   font-family: 'poppins';
-  text-align: center;
-  padding: 6px;
+  /* text-align: center; */
+  /* padding: 6px; */
   background-color: #ffffff;
   background-size: cover;
 
@@ -103,7 +103,7 @@ input {
   margin: 0 10px;
 }
 
-button {
+.button1 {
   padding: 16px 36px;
   background-color: white;
   color: black;
@@ -113,7 +113,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button1:hover {
   background-color: black;
   color: white;
   transition-duration: .6s;

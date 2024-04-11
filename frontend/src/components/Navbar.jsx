@@ -4,7 +4,7 @@ import "../App.css";
 const Navbar = () => {
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-with-frame">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-with-frame bg-black">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           MyCoin

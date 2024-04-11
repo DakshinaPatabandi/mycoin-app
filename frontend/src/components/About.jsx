@@ -6,7 +6,7 @@ import whatsappLogo from '../assets/whatsapp.png';
 import linkedinLogo from '../assets/linkedin.png'; 
 import youtubeLogo from '../assets/youtube.png';
 import "../App.css";
-import Navbar from './Navbar';
+import NavbarNew from "./NavbarNew";
 
 
 
@@ -16,14 +16,14 @@ const About = () => {
 
         <div className="flex-container-about  vh-150">
 
-            <div className="UpNavtitle">
+            {/* <div className="UpNavtitle">
                 <p className='pt-5 UpNavtitle1'>MyCoin</p>
                 <p className='UpNavtitle2' >Expenses Tracker Web Application</p>
-            </div>
+            </div> */}
 
             <div className='container pt-2'>
 
-                <Navbar />
+            <NavbarNew />
 
                 <div className="aboutbox">
                     <h1 className='pt-5 abouttopic'>Benifits about using MyCoin</h1>
