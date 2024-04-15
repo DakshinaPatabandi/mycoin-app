@@ -13,26 +13,21 @@ const Menu = [
   },
   {
     id:2,
-    name: "About",
-    link: "/About",
-  },
-  {
-    id:3,
     name: "SignUp",
     link: "/Register",
   },
   {
-    id:4,
+    id:3,
     name: "My Account",
     link: "/AccountHome",
   },
   {
-    id:5,
+    id:4,
     name: "Income",
     link: "/Income",
   },
   {
-    id:6,
+    id:5,
     name: "Expenses",
     link: "/Expenses",
   },
@@ -60,7 +55,7 @@ const NavbarNew = () => {
             <a href="#" className= "font-bold text-3xl sm:text-3xl flex gap-2 ">
               <img src={Logo} alt="Logo" 
               className="w-10"/>
-              MyCion 
+              MyCion
             </a>
             <a className="pl-12 text-1xl sm:text-1xl">Expenses Tracker Web Application</a>
           </div>

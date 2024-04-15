@@ -1,7 +1,10 @@
+import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import NavbarNew from "./NavbarNew";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Signup() {
   const navigate = useNavigate();
@@ -28,12 +31,22 @@ function Signup() {
       .catch((err) => console.log(err));
   };
 
+  React.useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  });
+
   return (
     <>
       <NavbarNew />
 
-      <div className="container mt-2 justify-content-center align-items-center d-flex  ">
-        <div className="mt-5  justify-content-center align-items-center rounded-2 p-5 formbox1">
+      <div className="container mt-2 justify-content-center align-items-center d-flex">
+        <div data-aos="zoom-in" className="mt-5  justify-content-center align-items-center rounded-2 p-5 formbox1 shadow-xl">
           <h2>Create your account</h2>
           <form action="" onSubmit={handleSubmit}>
             <div className="mb-3">

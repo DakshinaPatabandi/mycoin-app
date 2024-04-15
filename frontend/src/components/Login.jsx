@@ -1,9 +1,12 @@
+import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import NavbarNew from "./NavbarNew";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Login() {
   const navigate = useNavigate();
@@ -38,11 +41,21 @@ function Login() {
       .catch((err) => console.log(err));
   };
 
+  React.useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  });
+
   return (
     <>
       <NavbarNew />
       <div className="container pt-5 justify-content-center align-items-center d-flex  ">
-        <div className="mt-1 justify-content-center align-items-center rounded-2 p-5 formbox2">
+        <div data-aos="zoom-in" className="mt-1 justify-content-center align-items-center rounded-2 p-5 formbox2">
           <h2>Log In</h2>
           <form action="" onSubmit={handleSubmit}>
             <div class="mb-3">

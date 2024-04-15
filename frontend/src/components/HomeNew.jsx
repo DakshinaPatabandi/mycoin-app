@@ -1,6 +1,9 @@
 import React from "react";
 import NavbarNew from "./NavbarNew";
 import Features from "./Features";
+import Benifits from "./Benifits";
+import Footer from "./Footer";
+
 import HomePic1 from "../assets/HomePic1.png";
 import HomePic2 from "../assets/HomePic2.png";
 import HomePic3 from "../assets/HomePic3.png";
@@ -128,6 +131,9 @@ const HomeNew = () => {
       </div>
 
       <Features />
+      <Benifits />
+      <Footer />
+      
     </div>
   );
 };

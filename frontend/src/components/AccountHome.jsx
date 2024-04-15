@@ -2,17 +2,35 @@ import React from 'react'
 // import { NavLink } from "react-router-dom"
 import "../App.css";
 import NavbarNew from "./NavbarNew";
+import Features from "./Features";
+import Slider from "react-slick";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 
 
 const About = () => {
+
+    React.useEffect(() => {
+        AOS.init({
+          offset: 100,
+          duration: 800,
+          easing: "ease-in-sine",
+          delay: 100,
+        });
+        AOS.refresh();
+      });
+      
     return (
 
         <div>
             <div>
 
             <NavbarNew />
+            <Features />
+            
+            
 
                 <div className="aboutbox">
                     <h1 className='pt-5 accountHometopic'>Account Balance:</h1>
