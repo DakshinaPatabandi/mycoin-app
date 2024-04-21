@@ -22,6 +22,8 @@ function Login() {
     }));
   };
 
+  axios.defaults.withCredentials = true; // New
+
   const handleSubmit = (event) => {
     event.preventDefault();
     axios

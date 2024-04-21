@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         primary: "#fea928",
         secondary: "#ed8900",
+        red: "#c1121f",
       },
       container: {
         center:true,
