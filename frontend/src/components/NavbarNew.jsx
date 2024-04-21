@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../assets/Logo.png";
 import { IoMdSearch } from "react-icons/io";
 import { RiAccountCircleFill } from "react-icons/ri";
@@ -46,6 +46,8 @@ const DropdownLinks = [
 ]
 
 const NavbarNew = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+
   return (
     <div className="shadow-md bg-white">
       {/* Upper Navbar */}
@@ -83,6 +85,7 @@ const NavbarNew = () => {
         </div>
       </div>
       {/* Lower Navbar */}
+      {!isAuthenticated ? null : 
       <div className="flex justify-center">
         <ul className="sm:flex hidden items-center gap-4">
           {
@@ -121,7 +124,8 @@ const NavbarNew = () => {
           </li>
         </ul>
       </div>
-    </div>
+      }
+    </div> 
   );
 };
 

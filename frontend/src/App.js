@@ -18,6 +18,8 @@ import Benifits from './components/Benifits'
 import Footer from './components/Footer'
 
 
+
+
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
@@ -52,6 +54,8 @@ const App = () => {
             <Route path='/Register' element={<Register />}> </Route> 
             <Route path='/Benifits' element={<Benifits />}> </Route>
             <Route path='/Footer' element={<Footer />}> </Route>
+
+
             
 
             

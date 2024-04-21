@@ -196,13 +196,6 @@ input {
   text-align: center;
 }
 
-/* .leftbox {
-  text-align: left;
-}
-
-.rightbox {
-  text-align: right;
-} */
 
 .playbtn {
   padding: 20px 30px;
@@ -221,91 +214,6 @@ input {
   transition-duration: .6s;
 }
 
-
-
-
-
-/* -----------------------------home page-----------------------*/
-
-/* .flex-container-home {
-  background-color: #a3b4be;
-} */
-
-.flex-container-home {
-  background-color: #ffffff;
-}
-
-
-.hometopic {
-  font-size: 3.6rem;
-  font-weight: 600;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.homesubtopic {
-  font-size: 1.4rem;
-  padding: 12px 0px;
-
-}
-
-.UpNavtitle1 {
-  font-size: 2.4rem;
-  padding: 0px 0px;
-  text-align: start;
-  margin-left: 7%;
-  margin-top: 0%;
-  margin-bottom: 0%;
-}
-
-.UpNavtitle2 {
-  font-size: 1rem;
-  padding: 0px 0px;
-  text-align: left;
-  margin-left: 7%;
-  margin-top: 0%;
-  margin-bottom: 1%;
-}
-
-.homebtn {
-  padding: 20px 30px;
-  width: 100px;
-  border-radius: 0;
-  background-color: rgb(2, 122, 48);
-  text-decoration: none;
-  font-family: 'poppins';
-  color: white;
-  font-weight: 500;
-}
-
-.homebtn:hover {
-  color: rgb(254, 254, 254);
-  background-color: #000000;
-  transition-duration: .6s;
-}
-
-
-/* -----------------------------about page-----------------------*/
-
-/* .flex-container-about {
-  background-color: #dce0e2;
-  text-align: left;
-} */
-
-.flex-container-about {
-  background-color: #ffffff;
-  text-align: left;
-}
-
-
-.aboutsubtopics1 {
-  font-size: 1.4rem;
-  padding: 12px 0px;
-}
-
-/* .aboutsubtopics2 {
-  font-size: 0.8rem;
-  padding: 8px 0px;
-} */
 
 /* -----------------------------------Signhomepage------------------------------------- */
 
@@ -347,11 +255,6 @@ input {
   background-color: #ffffff;
   text-align: left;
 }
-
-/* .flex-container-accountHome {
-  background-color: #dce0e2;
-  text-align: left;
-} */
 
 .accountHomesubtopics1 {
   font-size: 1.2rem;
@@ -448,93 +351,12 @@ input {
 }
 
 
-/* -----------------------------------About page photos------------------------------------- */
-
-.facebook-logo {
-  width: 30px;
-  height: auto;
-  margin-right: 50px;
-}
-
-.instagram-logo {
-  width: 30px;
-  height: auto;
-  margin-right: 50px;
-}
-
-.whatsapp-logo {
-  width: 30px;
-  height: auto;
-  margin-right: 50px;
-}
-
-.linkedin-logo {
-  width: 30px;
-  height: auto;
-  margin-right: 50px;
-}
-
-.youtube-logo {
-  width: 30px;
-  height: auto;
-  margin-right: 50px;
-}
-
-/* -----------------------------------Home page photos------------------------------------- */
-
-.GoldCup {
-  width: 500px;
-  height: auto;
-  margin-right: 50px;
-}
 
 
 
 
-/* -----------------------------------NavBar------------------------------------- */
-
-/* .navbar-frame {
-  border: 0px solid #3d3d3dcb;
-  padding: 0px;
-  margin: 0px;
-  background-color: #bebaba72;
-  color: #000000;
-  -webkit-text-fill-color: #ffffff;
-} */
-
-.navbar {
-  display: flex;
-  border: 2px solid;
-  border-color: #028ec5;
-  padding: 0px;
-  margin: 0px;
-  background-color: #b8b8b872;
-  color: #000000;
-  justify-content: center;
-  text-decoration: none;
-}
 
 
-.container-boxx{
-  display: flex;
-  height: calc(100vh - 70px);
-} 
-
-/* .chat-list{
-  width: 40%;
-  margin: 16px;
-  background-color: rgb(215, 216, 216);
-  border-radius: 36px;
-} */
-
-.messages{
-  width: 100%;
-  margin: 16px;
-  background-color:#fcf6bd;
-  border-radius: 16px;
-  padding-left: 200px;
-  padding-right:200px;
-}
 
 
 
