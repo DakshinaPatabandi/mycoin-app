@@ -5,7 +5,6 @@ import { RiAccountCircleFill } from "react-icons/ri";
 import { FaCaretDown } from "react-icons/fa";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
 
 const Menu = [
   {
@@ -42,38 +41,59 @@ const DropdownLinks = [
   },
   {
     id: 2,
-    name: "Comming Soon..",
+    name: "Coming Soon..",
     link: "/#",
   },
 ];
 
 const NavbarNew = () => {
-  const [Auth, setAuth] = useState(false); //New
-  const [username, setUsername] = useState(""); //New
-  const [message, setMessage] = useState(""); //New
+  const [auth, setAuth] = useState(false);
+  const [username, setUsername] = useState("");
+  const [message, setMessage] = useState("");
 
-  useEffect(() => {   //New set
-    axios.get("http://localhost:8801").then((res) => {
-      if (res.data.Status === "Success") {
-        setAuth(true);
-        setUsername(res.data.username);
-      } else {
-        setAuth(false);
-        setMessage(res.data.Message);
+  useEffect(() => {
+    const storedAuth = localStorage.getItem("auth");
+    if (storedAuth === "true") {
+      setAuth(true);
+    } else {
+      setAuth(false);
+    }
+  }, []); // Empty dependency array to run only once when component mounts
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("http://localhost:8801");
+        if (res.data.Status === "Success") {
+          setAuth(true);
+          setUsername(res.data.username);
+          localStorage.setItem("auth", "true");
+        } else {
+          setAuth(false);
+          setMessage(res.data.Message);
+          localStorage.setItem("auth", "false");
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
       }
-    });
-  }, []);
+    };
+
+    fetchData();
+  }, [auth]); // Added auth as a dependency
 
   const handleLogout = () => {
     axios.post("http://localhost:8801/Register")
-    .then(res => {
-      if(res.data.Status === "Success") {
-        window.location.reload(true);
-      }else{
-        alert("error");
-      }
-    }).catch(err => console.log(err))
-  }
+      .then(res => {
+        if (res.data.Status === "Success") {
+          localStorage.setItem("auth", "false");
+          setAuth(false);
+          window.location.reload(true);
+        } else {
+          alert("error");
+        }
+      })
+      .catch(err => console.log(err));
+  };
 
   return (
     <div className="shadow-md bg-white">
@@ -102,7 +122,7 @@ const NavbarNew = () => {
               <IoMdSearch className="text-gray-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-5" />
             </div>
             {/*Sign In button*/}
-            {!Auth ? (
+            {!auth ? (
               <Link
                 to="/Register"
                 className="bg-gradient-to-r from-primary to-secondary transition-all  duration-200 text-white
@@ -117,7 +137,7 @@ const NavbarNew = () => {
               <Link
                 to="/"
                 className="bg-gradient-to-r from-red to-red transition-all  duration-200 text-white
-          py-1 px-4 rounded-full flex items-center gap-3 group " 
+          py-1 px-4 rounded-full flex items-center gap-3 group "
                 onClick={handleLogout}
               >
                 <span className="group-hover:block hidden transition-all duration-200">
@@ -130,17 +150,17 @@ const NavbarNew = () => {
         </div>
       </div>
       {/* Lower Navbar */}
-      {!Auth ? null : (
+      {!auth ? null : (
         <div className="flex justify-center">
           <ul className="sm:flex hidden items-center gap-4">
             {Menu.map((data) => (
               <li key={data.id}>
-                <a
-                  href={data.link}
+                <Link
+                  to={data.link}
                   className="inline-block px-4 hover:text-primary duration-200"
                 >
                   {data.name}
-                </a>
+                </Link>
               </li>
             ))}
             {/* Dropdown */}
@@ -159,12 +179,12 @@ const NavbarNew = () => {
                 <ul>
                   {DropdownLinks.map((data) => (
                     <li key={data.id}>
-                      <a
-                        href={data.link}
+                      <Link
+                        to={data.link}
                         className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
                       >
                         {data.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -178,3 +198,4 @@ const NavbarNew = () => {
 };
 
 export default NavbarNew;
+

@@ -36,6 +36,7 @@ const Income = () => {
 
   return (
     <div>
+      
       <NavbarNew />
 
       <div>
