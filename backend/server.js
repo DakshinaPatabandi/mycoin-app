@@ -28,7 +28,7 @@ const db = mysql.createConnection({
     database: "mycoin"
 })
 
-const verifyUser = (req, res, next) => { //New set
+const verifyUser = (req, res, next) => { //New set.
     const token = req.cookies.token;
     if(!token) {
         return res.json({Message: "we need token, pls provide it"})
