@@ -16,6 +16,7 @@ import Features from './components/Features'
 import Register from './components/Register'
 import Benifits from './components/Benifits'
 import Footer from './components/Footer'
+import CreditCard from './components/CreditCard'
 
 
 
@@ -54,6 +55,7 @@ const App = () => {
             <Route path='/Register' element={<Register />}> </Route> 
             <Route path='/Benifits' element={<Benifits />}> </Route>
             <Route path='/Footer' element={<Footer />}> </Route>
+            <Route path='/CreditCard' element={<CreditCard />}> </Route>
 
 
             

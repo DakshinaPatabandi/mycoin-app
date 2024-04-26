@@ -40,10 +40,8 @@ const Income = () => {
       <NavbarNew />
 
       <div>
-        <div
-          className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 justify-center items-center duration-200 */}
-        {/* Background patten"
-        >
+        <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 justify-center items-center duration-200 */}
+        {/* Background patten"        >
           {/* Background patten */}
           <div className=" h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-9"></div>
 
