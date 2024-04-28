@@ -12,20 +12,16 @@ const MyCoinAI = () => {
   const [prompt, setPrompt] = useState("");
   const [price, setPrice] = useState("");
 
-  // Update prompt whenever totalIncome or totalExpense changes
-  useEffect(() => {
-    setPrompt(`By considering the total income = ${totalIncome} and total expenses = ${totalExpense} provided, please give me a recommendation that can I afford what I'm going to buy when I provide the price here. The price of the item = ${price}`);
-  }, [totalIncome, totalExpense]);
-
-
   const handleGenerateRequest = async (e) => {
     e.preventDefault();
-    const price = e.target.form.elements["totalExpenses"].value;
-    setPrice(price);
+    const itemPrice = e.target.form.elements["itemPrice"].value;
+    setPrice(itemPrice);
+  
+    // Update the prompt with the latest price
+    const updatedPrompt = `By considering the total income = ${totalIncome}, total expenses = ${totalExpense} and the remaining amount to do anything = ${totalIncome - totalExpense} provided, please tell me whether I can afford what I'm going to buy when I provide the price. The price = ${itemPrice}. Assume only these are considering for the recommendation.`;
     
-    const updatedPrompt = `By considering the total income = ${totalIncome} and total expenses = ${totalExpense} provided, please give me a recommendation that can I afford what I'm going to buy when I provide the price here. The price of the item = ${price}`;
-    setPrompt(updatedPrompt)
-    
+    setPrompt(updatedPrompt);
+  
     try {
       const response = await fetch("http://localhost:8801/MyCoinAI", {
         method: "POST",
@@ -46,7 +42,6 @@ const MyCoinAI = () => {
       console.error("Error:", error.message);
     }
   };
-  
 
   useEffect(() => {
     const fetchTotalIncomeAndExpenses = async () => {
@@ -73,9 +68,9 @@ const MyCoinAI = () => {
         <p className="MyCoinAiSubText">
           Description: You can use this application and make your money
           transactions very accurately and it will be easy for you to make very
-          accurate decisions. Ai technology will give you the financial
+          accurate decisions. AI technology will give you the financial
           knowledge you need and you will no longer be fooled by scams. Use
-          MyCion AI technology now. 
+          MyCoin AI technology now. 
         </p>
       </div>
       <div className="container mt-2 justify-content-center align-items-center d-flex">
@@ -110,14 +105,14 @@ const MyCoinAI = () => {
             </div>
             <div className="mb-3">
               <label className="form-label">
-                <strong>Total Expenses</strong>
+                <strong>Price of the Item</strong>
               </label>
-              <textarea
+              <input
                 type="text"
                 required
-                placeholder="What are you thinking to buy?"
+                name="itemPrice"
+                placeholder="Enter the price of the item"
                 className="form-control rounded-0"
-                onChange={(e) => setPrice(e.target.value)}
               />
             </div>
             <div className="flex justify-center">
