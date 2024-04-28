@@ -17,11 +17,15 @@ const Income = () => {
       .catch((err) => console.log(err));
   }, []);
 
+
   const handleDelete = async (id) => {
     try {
-      await axios.delete("http://localhost:8801/Income/" + id);
-      window.location.reload();
-    } catch (err) {}
+      await axios.delete(`http://localhost:8801/Income/${id}`);
+      setIncome(income.filter(income => income.In_ID !== id));
+    } catch (err) {
+      console.error('Error deleting income:', err);
+      
+    }
   };
 
   React.useEffect(() => {
@@ -76,7 +80,8 @@ const Income = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {income.map((data, i) => (
+                    {income.length > 0 ? (
+                      income.map((data, i) => (
                         <tr key={i}>
                           <td>{data.Source}</td>
                           <td>{data.Income}</td>
@@ -87,15 +92,20 @@ const Income = () => {
                             >
                               Update
                             </Link>
-                            <button
+                            <Link
                               className="btn btn-danger ms-2"
                               onClick={(e) => handleDelete(data.In_ID)}
                             >
                               Delete
-                            </button>
+                            </Link>
                           </td>
                         </tr>
-                      ))}
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan="3">No income available</td>
+                      </tr>
+                    )}
                     </tbody>
                   </table>
                 </div>

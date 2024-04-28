@@ -3,9 +3,11 @@ import React from "react";
 import "../App.css";
 import NavbarNew from "./NavbarNew";
 import Features from "./Features";
-import Slider from "react-slick";
+import Benifits from "./Benifits";
+// import Slider from "react-slick";
 import AOS from "aos";
 import "aos/dist/aos.css";
+// import { Link } from "react-router-dom";
 
 const About = () => {
   React.useEffect(() => {
@@ -22,22 +24,41 @@ const About = () => {
   
 
   return (
+
     <div>
       <div>
         <NavbarNew />
 
-        <div className="aboutbox">
+    <div className="py-10 mb-10">
+    <div className="container">
+      {/* header section */}
+      <div className="text-center mb-10 max-w-[600px] mx-auto">
+        <p data-aos="fade-up" className="text-sm text-yellow-600">
+          Hello
+        </p>
+        <h1 data-aos="fade-up" className="text-3xl font-bold">
+          Welcome to the MyCoin!!!
+        </h1>
+        <p data-aos="fade-up" className="text-xs text-gray-400">
+          We are always with you!
+        </p>
+      </div>
+      <div></div>
+
+
+
+        {/* <div className="aboutbox">
           <h1 className="pt-5 accountHometopic">Account Balance:</h1>
 
           <p className="accountHomesubtopics1">User Name:</p>
           <p className="accountHomesubtopics1">Email:</p>
           <p className="accountHomesubtopics1">Password:</p>
 
-        </div>
+        </div> */}
         <Benifits />
         <Features />
       </div>
-    </div>
+    </div></div></div>
   );
 };
 

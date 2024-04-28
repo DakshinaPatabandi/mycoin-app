@@ -18,7 +18,7 @@ function UpdateExpenses() {
       .put("http://localhost:8801/UpdateExpenses/" + id, { method, cost })
       .then((res) => {
         console.log(res);
-        navigate("/Expences");
+        navigate("/Expenses");
       })
       .catch((err) => console.log(err));
   }

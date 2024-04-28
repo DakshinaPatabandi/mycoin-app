@@ -14,7 +14,7 @@ app.use(cookieParser()) // new
 // app.use(cors())
 app.use(cors({
     origin: ["http://localhost:3000"],
-    methods: ["POST", "GET", "PUT"], // Include PUT method
+    methods: ["POST", "GET", "PUT", "DELETE"], // Include PUT method
     credentials: true
 }))
 app.use(bodyParser.json())

@@ -19,10 +19,13 @@ const Expenses = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete("http://localhost:8801/Expenses/" + id);
-      window.location.reload();
-    } catch (err) {}
+      await axios.delete(`http://localhost:8801/Expenses/${id}`);
+      setExpenses(expenses.filter(expense => expense.Ex_ID !== id));
+    } catch (err) {
+      console.error('Error deleting expense:', err);
+    }
   };
+  
 
   React.useEffect(() => {
     AOS.init({
@@ -77,27 +80,34 @@ const Expenses = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {expenses.map((data, i) => (
-                        <tr key={i}>
-                          <td>{data.Method}</td>
-                          <td>{data.Cost}</td>
-                          <td>
+                      {expenses.length > 0 ? (
+                        expenses.map((data, i) => (
+                          <tr key={i}>
+                            <td>{data.Method}</td>
+                            <td>{data.Cost}</td>
+                            <td>
                             <Link
                               to={`/UpdateExpenses/${data.Ex_ID}`}
                               className="btn btn-primary"
                             >
                               Update
                             </Link>
-                            <button
-                              className="btn btn-danger ms-2"
-                              onClick={(e) => handleDelete(data.Ex_ID)}
-                            >
-                              Delete
-                            </button>
-                          </td>
+                              <Link
+                                className="btn btn-danger ms-2"
+                                onClick={(e) => handleDelete(data.Ex_ID)}
+                              >
+                                Delete
+                              </Link>
+                            </td>
+                          </tr>
+                        ))
+                      ) : (
+                        <tr>
+                          <td colSpan="3">No expenses available</td>
                         </tr>
-                      ))}
+                      )}
                     </tbody>
+
                   </table>
                 </div>
               </div>
