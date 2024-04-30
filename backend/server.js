@@ -221,7 +221,7 @@ app.delete('/Expenses/:id', verifyUser, (req, res) => {
 })
 
 
-// Taking the total sum of income nd expences of the logged user.
+// Taking the total sum of income and expences of the logged user.
 app.get('/MyCoinAI', verifyUser, (req, res) => {
     const user_id = req.user_id;
     const incomeQuery = "SELECT SUM(Income) AS totalIncome FROM income WHERE user_id = ?";

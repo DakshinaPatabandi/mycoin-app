@@ -57,7 +57,7 @@ const Income = () => {
                   Hello!!!
                 </p>
                 <h1 data-aos="fade-up" className="text-3xl font-bold">
-                  Track your income here
+                  Track your monthly income here
                 </h1>
                 <p data-aos="fade-up" className="text-xs text-gray-400">
                   We are always with you!
