@@ -20,7 +20,7 @@ const MyCoinAI = () => {
     // Update the prompt with the latest price
     const updatedPrompt = `By considering the total income = ${totalIncome}, total expenses = ${totalExpense} and the remaining amount to do anything = ${
       totalIncome - totalExpense
-    } provided, please tell me whether I can afford what I'm going to buy when I provide the price. The price = ${itemPrice}. Assume only these are considering for the recommendation.`;
+    } provided, please tell me whether I can afford what I'm going to buy when I provide the price. If it is close to the remaining amount tell whether it is better or not to buy the product. The price = ${itemPrice}. Assume only these are considering for the recommendation. And don't give any symbols like *`;
 
     setPrompt(updatedPrompt);
 

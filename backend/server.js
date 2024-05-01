@@ -1,8 +1,8 @@
 const express = require("express")
 const mysql = require('mysql')
 const cors = require('cors')
-const cookieParser = require('cookie-parser'); // new
-const jwt = require('jsonwebtoken') // new
+const cookieParser = require('cookie-parser'); 
+const jwt = require('jsonwebtoken') 
 const bodyParser = require('body-parser')
 require('dotenv').config();
 const { GoogleGenerativeAI } = require("@google/generative-ai");
@@ -10,11 +10,11 @@ const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
 const app = express()
 app.use(express.json())
-app.use(cookieParser()) // new
+app.use(cookieParser()) 
 // app.use(cors())
 app.use(cors({
     origin: ["http://localhost:3000"],
-    methods: ["POST", "GET", "PUT", "DELETE"], // Include PUT method
+    methods: ["POST", "GET", "PUT", "DELETE"], 
     credentials: true
 }))
 app.use(bodyParser.json())
@@ -28,7 +28,7 @@ const db = mysql.createConnection({
     database: "mycoin"
 })
 
-const verifyUser = (req, res, next) => { //New set.
+const verifyUser = (req, res, next) => { 
     const token = req.cookies.token;
     if(!token) {
         return res.json({Message: "we need token, pls provide it"})
@@ -45,7 +45,7 @@ const verifyUser = (req, res, next) => { //New set.
     }
 }
 
-app.get('/', verifyUser, (req, res) => { //New set
+app.get('/', verifyUser, (req, res) => { 
     return res.json({Status: "Success", user_id: req.user_id, username: req.username})
 })
 
